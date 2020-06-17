@@ -132,7 +132,7 @@ The server executable needs to be built and placed in the /bin folder. The *make
 #
 GOOS=linux GOARCH=amd64 go build -o ./runtime/bin/server  ./server/server.go
 
-#Windows (startagent might need to be built with -ldflags -H=windowsgui)
+#Windows
 #
 GOOS=windows GOARCH=amd64 go build -o ./runtime/bin/server.exe  ./server/server.go
 
