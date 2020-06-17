@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RRAserver - Agent Update</title>
+</head>
+<body>
+<h1>RAserver - Agent Update</h1>
+
+{{if ne .Action `Update`}}
+    <form method="POST" action="">
+        <input type="hidden"  name="Action" value="Update">
+        <label for="Agents">Choose agent(s) to update:</label><br>
+        <select name="Agents" id="Agents" multiple style="width:400px;">
+            {{range .Agents}}
+                <option value="{{.}}">{{.}}</option>
+            {{end}}
+        </select>
+        <br><br>
+        Update type:<br>
+        <select name="UpdateType" id="UpdateType" style="width:200px;">
+            <option value="modules">Modules Only</option>
+            <option value="full">Full Update</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Launch Updates">
+    </form>
+    <br>
+{{end}}
+{{if eq .Action `Update`}}
+    Update request of type '{{.UpdateType}}' sent to Agent(s): <br>
+    <ul>
+    {{range .Agents}}
+        <li>{{.}}</li>
+    {{end}}
+    </ul>
+    <br>
+    Feedback: <br>
+    <pre>{{range .Feedback}}{{.}}{{end}}</pre>
+{{end}}
+<br>
+<a href="/"><-- Back to main menu</a></li>
+</body>
+</html>

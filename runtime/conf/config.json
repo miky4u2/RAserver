@@ -1,0 +1,8 @@
+{
+    "bindIP": "",
+    "bindPort": "8081",
+    "allowedIPs": ["127.0.0.1", "::1"],
+    "validateAgentTLS": false,
+    "logFile":"",
+    "logToFile": false
+}

@@ -1,0 +1,15 @@
+# Ignored files
+runtime/agents/archives/*
+runtime/agents/binaries/windows/*
+runtime/agents/binaries/linux/*
+runtime/agents/binaries/osx/*
+runtime/log/*
+runtime/bin/*
+runw
+runosx
+runlinux
+
+# Never ignore git files
+!.gitignore
+!.gitkeep
+!.gitattributes

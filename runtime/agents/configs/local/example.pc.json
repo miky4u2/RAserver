@@ -1,0 +1,9 @@
+{
+    "agentIP": ["127.0.0.1","::1"],
+    "agentOS":"windows",
+    "agentURL":"https://localhost:8080",
+    "modules":{
+        "hello":"agents\\example.pc\\hello"
+    },
+    "TLScert":"localhost"
+}

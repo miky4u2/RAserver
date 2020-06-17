@@ -1,0 +1,9 @@
+{
+    "agentIP": ["127.0.0.1","::1"],
+    "agentOS":"linux",
+    "agentURL":"https://localhost2:8080",
+    "modules":{
+        "hello":"agents\\example.linux\\hello"
+    },
+    "TLScert":"localhost"
+}

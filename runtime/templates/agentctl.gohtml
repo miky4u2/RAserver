@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RAserver - Agent Control</title>
+</head>
+<body>
+<h1>RAserver - Agent Control</h1>
+
+{{if ne .Action `Ctl`}}
+    <form method="POST" action="">
+        <input type="hidden"  name="Action" value="Ctl">
+        <label for="Agents">Choose agent(s):</label><br>
+        <select name="Agents" id="Agents" multiple style="width:400px;">
+            {{range .Agents}}
+                <option value="{{.}}">{{.}}</option>
+            {{end}}
+        </select>
+        <br><br>
+        Command to send:<br>
+        <select name="Type" id="Type" style="width:200px;">
+            <option value="status">Status</option>
+            <option value="restart">Restart</option>
+            <option value="stop">Stop</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Send command">
+    </form>
+    <br>
+{{end}}
+{{if eq .Action `Ctl`}}
+    Command request of type '{{.Type}}' sent to Agent(s): <br>
+    <ul>
+    {{range .Agents}}
+        <li>{{.}}</li>
+    {{end}}
+    </ul>
+    <br>
+    Feedback: <br>
+    <pre>{{range .Feedback}}{{.}}{{end}}</pre>
+{{end}}
+<br>
+<a href="/"><-- Back to main menu</a></li>
+</body>
+</html>
