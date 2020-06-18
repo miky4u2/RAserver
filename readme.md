@@ -103,7 +103,7 @@ runtime
 
 ## Agent Local config files 
 - The files must be named [agentID].json (for example if an agent ID is "example.linux", its config file should be named "example.linux.json")
-- Module's path format depends on the OS the server is running on, use / for Linux or double \\ for windows. Below example is a server application running on windows
+- Module's path format depends on the OS the server is running on, use / for Linux or double \\ for windows. 
 - **agentIP** : Array of IPV4/IPV6. IP of the agent. This will be validated when the agent downloads the updates.
 - **agentOS** : This is used to select the correct binary for the agent. Options are *linux*, *osx*, *windows*
 - **modules** : map of *module_name* : *module_path* . Module name will be the module file name used on the agent side. The path is pointing to the locally stored module file (see above runtime file layout). See [RAagent repository](https://github.com/miky4u2/RAagent) for more info about modules.
