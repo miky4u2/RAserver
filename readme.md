@@ -131,7 +131,7 @@ runtime
     "agentOS":"windows",
     "agentURL":"https://localhost:8080",
     "modules":{
-        "start_notepad.bat":"agents/example.pc/start_notepad.bat",
+        "start_notepad.cmd":"agents/example.pc/start_notepad.cmd",
         "hello.bat":"groups/defaultWindows/hello.bat"
     },
     "TLScert":"localhost"
