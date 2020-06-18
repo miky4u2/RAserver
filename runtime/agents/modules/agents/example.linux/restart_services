@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 != '' ]]
+then
+        systemctl restart $1
+        systemctl status $1
+fi
+
+exit 0

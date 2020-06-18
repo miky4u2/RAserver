@@ -3,7 +3,8 @@
     "agentOS":"windows",
     "agentURL":"https://localhost:8080",
     "modules":{
-        "hello":"agents\\example.pc\\hello"
+        "start_notepad.bat":"agents\\example.pc\\start_notepad.bat",
+        "hello.bat":"groups\\defaultWindows\\hello.bat"
     },
     "TLScert":"localhost"
 }

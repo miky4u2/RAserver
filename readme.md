@@ -5,7 +5,7 @@
 RAserver is one of two related small and simple tools, particularly useful for system administration of multiple servers and remote task automation. Those tools are the result of my first project in GO so the code design might not be the best but they do what they were designed to do just fine :-).  
 Running services allowing remote program execution can represent a high security risk when not properly firewalled, make sure to setup appropriate firewall rules prior to deployment or do not use at all if you don't know what you are doing.
 
-RAserver is of no use by itself, it was designed as an add-on to RAagent. RAserver acts as the **'modules and binaries repository'** for one or several RAagents, making modules deployment and agents update easier. I have done my best to design those tools to run on Linux/Osx/Windows but only used them in production on Linux systems.
+RAserver is of no use by itself, it was designed as an add-on to RAagent. RAserver acts as the **'modules and binaries repository'** for one or several RAagents, making bulk modules deployment and agents update easier. I have done my best to design those tools to run on Linux/Osx/Windows but only used them in production on Linux systems.
 
 Check out the [RAagent repository](https://github.com/miky4u2/RAagent) for the related RAagent code and info.
 
@@ -91,9 +91,9 @@ runtime
                      +--groups
                              |
                              +--defaultLinux (Linux type sharable modules in this folder)
-                             +--defaultosx (osx type sharable modules in this folder)
+                             +--defaultOsx (osx type sharable modules in this folder)
                              +--defaultWindows (Windows type sharable modules in this folder)
-                             +--someothergroup (etc..)
+                             +--someOtherGroup (etc..)
 ```
 
 ## Agent Remote config files
@@ -111,17 +111,31 @@ runtime
 
 
 ```json
+# Example of an agent running on Linux and server on Windows
+{
+    "agentIP": ["127.0.0.1","::1"],
+    "agentOS":"linux",
+    "agentURL":"https://localhost2:8080",
+    "modules":{
+        "restart_services":"agents\\example.linux\\restart_services",
+        "hello":"groups\\defaultLinux\\hello"
+    },
+    "TLScert":"localhost"
+}
+
+```
+```json
+# Example of an agent running on Windows and server on Linux
 {
     "agentIP": ["127.0.0.1","::1"],
     "agentOS":"windows",
     "agentURL":"https://localhost:8080",
     "modules":{
-        "hello":"agents\\example.pc\\hello",
-        "service_restart.bat":"groups\\defaultwindows\\service_restart.bat" 
+        "start_notepad.bat":"agents/example.pc/start_notepad.bat",
+        "hello.bat":"groups/defaultWindows/hello.bat"
     },
     "TLScert":"localhost"
 }
-
 ```
 
 ## Building RAserver

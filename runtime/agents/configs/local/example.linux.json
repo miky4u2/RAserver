@@ -3,7 +3,8 @@
     "agentOS":"linux",
     "agentURL":"https://localhost2:8080",
     "modules":{
-        "hello":"agents\\example.linux\\hello"
+        "restart_services":"agents\\example.linux\\restart_services",
+        "hello":"groups\\defaultLinux\\hello"
     },
     "TLScert":"localhost"
 }
