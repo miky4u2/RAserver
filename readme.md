@@ -164,11 +164,11 @@ I am not sure how to start it at boot or as a service on Windows but below is a 
 
 ```
 [Unit]
-Description = RAagent
+Description = RAserver
 After = network.target
 
 [Service]
-Type=forking
+Type=
 ExecStart = /path/to/RAserver/bin/server
 
 [Install]
