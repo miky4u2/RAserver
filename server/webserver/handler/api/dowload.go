@@ -40,7 +40,7 @@ func Download(w http.ResponseWriter, req *http.Request) {
 	// Populate the downloadReq struct with received json request
 	json.NewDecoder(req.Body).Decode(&downloadReq)
 
-	// Validate agentID string, return Forbiden if AgentID is malformated
+	// Validate agentID string, return forbidden if AgentID is malformated
 	if !regexp.MustCompile(`^[a-zA-Z0-9]+[a-zA-Z0-9\.\-_]*$`).MatchString(downloadReq.AgentID) {
 		http.Error(w, http.StatusText(403), http.StatusForbidden)
 		log.Println(`Download failed, AgentID incorrect:`, downloadReq.AgentID)

@@ -1,3 +1,7 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/miky4u2/RAserver)](https://goreportcard.com/report/github.com/miky4u2/RAserver)
+[![license](https://img.shields.io/github/license/miky4u2/RAserver.svg)]()
+
+
 # Remote Admin Server
 
 **RAserver is functioning but not tested on Osx at all. It might still contain some bugs I haven't come across yet but feel free to try it, use it, expand on it...**

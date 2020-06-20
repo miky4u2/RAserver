@@ -216,6 +216,9 @@ func sendUpdateRequest(agentID string, UpdateType string, validateAgentTLS bool)
 	agentURL := localConfig.AgentURL + `/update`
 
 	req, err := http.NewRequest(`POST`, agentURL, strings.NewReader(`{"type":"`+UpdateType+`"}`))
+	if err != nil {
+		return err
+	}
 	req.Header.Set("Content-Type", "application/json")
 
 	// Do we validate the agent TLS certificate ? true/false
