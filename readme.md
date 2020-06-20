@@ -1,5 +1,8 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/miky4u2/RAserver)](https://goreportcard.com/report/github.com/miky4u2/RAserver)
-[![license](https://img.shields.io/github/license/miky4u2/RAserver.svg)]()
+![license](https://img.shields.io/github/license/miky4u2/RAserver.svg)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/miky4u2/RAserver)
+[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/miky4u2/RAserver)](https://github.com/miky4u2/RAserver/releases/tag/v0.1.0)
+
 
 
 # Remote Admin Server
